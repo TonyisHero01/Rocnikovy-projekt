@@ -1,0 +1,2 @@
+Program s tématem E-shop
+nápad pro implementaci: používal bych PHP pro implementaci serverové stránky a JavaScript pro uživatelskou stránku. Pro uložení dat bych použil MySQL database. Pro generování URL bych použil technologii ".htaccess". Poté bych použil další detailní implementace obsahující i front-controller, Ajax, anti-SQL-injection atd.
