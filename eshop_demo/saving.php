@@ -16,8 +16,6 @@ $color = $input["color"] ?? "";
 $price = $input["price"] ?? "";
 
 $product = new Product($name, $number_in_stock, $add_time.'', $price);
-?>
-<?php
 $product->set_all_params($kategory, $description, $image_url, $width, $height, $length, $weight, $material, $color);
 $product->set_id($page["id"]);
 

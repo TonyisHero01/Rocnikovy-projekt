@@ -86,7 +86,7 @@ class Database {
         $description = htmlspecialchars($product->description);
 
         $stmt = $this->conn->prepare("UPDATE $this->tableName SET name = ?, kategory = ?, description = ?, number_in_stock = ?, image_url = ?, add_time = ?, width = ?, height = ?, length = ?, weight = ?, material = ?, color = ?, price = ? WHERE id = ?");
-        $stmt->bind_param("sssisiiiiissii", $name, $product->kategory, $description, $product->number_in_stock, $product->image_url, $product->add_time.'', $product->width, $product->height, $product->length, $product->weight, $product->material, $product->color, $product->price, $product->id);
+        $stmt->bind_param("sssissiiiissii", $name, $product->kategory, $description, $product->number_in_stock, $product->image_url, $product->add_time, $product->width, $product->height, $product->length, $product->weight, $product->material, $product->color, $product->price, $product->id);
         $stmt->execute();
         $stmt->close();
     }

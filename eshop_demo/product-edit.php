@@ -64,6 +64,7 @@ try {
     var colorElement = document.getElementById("color");
     var priceElement = document.getElementById("price");
     var imagePath =  document.getElementById("image_path");
+
     
     /*
     function enableCreateButton() {
@@ -94,7 +95,7 @@ try {
 
     formData.append('myFile', files[0]);
     formData.append("name",document.getElementById("name").value)
-        console.log('文件数据',formData)
+        console.log('form data: ',formData)
     fetch('./../images.php', {
         method: 'POST',
         body: formData

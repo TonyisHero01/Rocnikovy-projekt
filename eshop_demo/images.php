@@ -1,8 +1,9 @@
 <?php
 require_once "constants.php";
 $response = array();
+
 if ($_FILES['myFile']) {
-    $uploadDir = '/home/76824974/public_html/eshop_cms/images/';
+    $uploadDir = 'images/';
 
     $fileInfo = pathinfo($_FILES['myFile']['name']);
     $fileExtension = $fileInfo['extension'];
@@ -13,13 +14,9 @@ if ($_FILES['myFile']) {
 
     if (move_uploaded_file($_FILES['myFile']['tmp_name'], $uploadFilePath)) {
         $response['success'] = true;
-       // $response['message'] = "upload file successful";
         $response['filePath'] = '../'.$uploadFilePath;
-        $response['fileUrl'] = './'.$uploadFilePath;
-        //echo "upload file successful";
     } else {
-        //echo "error, upload file failed";
-        $response['success'] = false;
+        echo "error, upload file failed";
     }
 } else {
     echo "no file";
