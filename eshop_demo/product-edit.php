@@ -9,7 +9,7 @@ try {
 <!DOCTYPE html>
 <html>
 <head>
-    <title>article edit</title>
+    <title>product edit</title>
     <link rel="stylesheet" type="text/css" href="<?php echo APP_DIRECTORY ?>style.css">
 </head>
 <body>
